@@ -1,6 +1,5 @@
 import * as React from 'react';
 import './index.css';
-// import './App.css';
 
 function Board() {
   const [squares, setSquares] = React.useState(Array(9).fill(null));
@@ -23,7 +22,7 @@ function Board() {
 
   function renderSquare(i) {
     return (
-      <button className="bg-red-100 border-2 border-gray-600 font-bold mr-[-1px] mt-[-1px] p-5 text-3xl w-16 h-16" onClick={() => selectSquare(i)}>
+      <button className="bg-red-100 border-2 border-gray-600 font-normal mr-[-2px] mt-[-1px] p-5 text-3xl w-16 h-16" onClick={() => selectSquare(i)}>
         {squares[i]}
       </button>
     );
@@ -35,7 +34,7 @@ function Board() {
 
 return (
   <div className="flex flex-col items-center mt-10">
-    <div className="status text-black p-4 inline-block">
+    <div className="status text-black p-4 inline-block font-semibold text-lg">
       {status}
     </div>
     <div className="board-row flex justify-center">
